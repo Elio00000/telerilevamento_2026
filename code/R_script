@@ -1,0 +1,55 @@
+#frist R script
+#R come calcolatore
+2+3
+#assegnazione e oggetti
+ris2<-2+3
+#per vedere cosa c'è dentro all'oggetto
+ris2
+risu1<-4+6
+#si possono assegnare operzioni agli oggetti
+risultato+risu1
+
+#arrays o vettori
+
+#ad esempio campionamento 
+10,8,3,1,0
+#userò un concatenamento!!!
+sonia<-c(10,8,3,1,0)
+
+altro cmpionamento con stesso n
+3,10,20,50,100
+giorgia<-c(3,10,20,50,100)
+
+#funzione plot, con i vettori, ogni elemento di un vettore è una coordinata
+plot(giorgia,sonia) #primo parametro indipendente(X) secondo dipendente(Y)
+
+
+plot(giorgia,sonia, col=blue, pch=19, cex=2, xlab="inquinanti", ylab="delfini")
+#pch 
+     #sono i sibloi di R, i numeri si trovaano cercando su internet
+#cex
+    #grandezza dei punti del grafico
+
+
+#CRAN The Comprehensive R Archive Network
+#sito su cui si possono installare i pacchetti di R
+
+#la funzione è 
+install.packages("")
+install.packages("terra")
+library(terra)
+
+install.packages("imageRy")
+
+#oppure intallarlo da GitHub
+#ma prima altro pacchetto
+install.packages("devtools") #oppure remotes
+library(debtools)
+install_github("ducciorocchini/imageRy")
+
+
+
+
+
+
+     
