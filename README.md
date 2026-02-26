@@ -1,4 +1,6 @@
 # telerilevamento_2026🛰️
+![sentinel2img](https://github.com/user-attachments/assets/e1091ebd-5643-4031-9916-ec8e76ffb0b3)
+
 ## cosa è
 codice sviluppato durante il corso di telerilevamento 
 
