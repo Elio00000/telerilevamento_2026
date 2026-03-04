@@ -49,3 +49,5 @@ dev.off
 ?im.multiframe
 plot(b2,col=c("#454545","#A8A8A8","#EDEDED"))(100)
 plot(b2,col=cl)
+
+#?im.multiframe non funzia boh, in caso par(mfrow=c(1,2))
