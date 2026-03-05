@@ -62,3 +62,27 @@ cl<-colorRampPalette(c("#DEB887", "#98F5FF", "#7FFF00"))(100)
 plot(b2,col=cl)
 plot(b2,col=inferno(100))
 plot(b2,col=mako(100))
+
+im.multiframe(2,2)
+
+plot(b2,col=inferno(100))
+plot(b3,col=inferno(100))
+plot(b4,col=inferno(100))
+plot(b8,col=inferno(100))
+
+sentinel<-c(b2,b3,b4,b8)
+plot(sentinel)
+plot(sentinel, col=inferno(100))
+
+#ottenere informazioni
+sentinel
+names(sentinel)
+
+#subset di sentinel
+plot(sentinel$sentinel.dolomites.b8)   #boh a me non va
+
+#layer1=b2 layer2=b3 layer3=b4 layer4=b8
+plot(sentinel[[4]]
+
+
+
