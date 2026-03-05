@@ -82,7 +82,7 @@ names(sentinel)
 plot(sentinel$sentinel.dolomites.b8)   #boh a me non va
 
 #layer1=b2 layer2=b3 layer3=b4 layer4=b8
-plot(sentinel[[4]]
+plot(sentinel[[4]])
 
 
 
