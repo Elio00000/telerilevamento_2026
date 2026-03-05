@@ -51,3 +51,14 @@ plot(b2,col=c("#454545","#A8A8A8","#EDEDED"))(100)
 plot(b2,col=cl)
 
 #?im.multiframe non funzia boh, in caso par(mfrow=c(1,2))
+
+im.list()
+b2<-im.import("sentinel.dolomites.b2.tif")
+b8<-im.import("sentinel.dolomites.b8.tif")
+b3<-im.import("sentinel.dolomites.b3.tif")
+b4<-im.import("sentinel.dolomites.b4.tif")
+
+cl<-colorRampPalette(c("#DEB887", "#98F5FF", "#7FFF00"))(100)
+plot(b2,col=cl)
+plot(b2,col=inferno(100))
+plot(b2,col=mako(100))
