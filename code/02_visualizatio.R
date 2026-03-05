@@ -77,12 +77,13 @@ plot(sentinel, col=inferno(100))
 #ottenere informazioni
 sentinel
 names(sentinel)
+b2 #info su sistemi di riferiento etc, tipo  WGS 84 / UTM zone 32N (EPSG:32632)
+#UTM universale trasversa mercatore, EPSG eurpan petroleum survey group<-codice per il sistema di riferimentow
 
 #subset di sentinel
 plot(sentinel$sentinel.dolomites.b8)   #boh a me non va
 
 #layer1=b2 layer2=b3 layer3=b4 layer4=b8
 plot(sentinel[[4]])
-
-
+plot(sentinel[[2]])
 
