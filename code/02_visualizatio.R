@@ -111,6 +111,53 @@ library(ggplot2)
 im.ggplot(b8)
 #a questo punto 4 modi per fare un multiframe 
 
+#––––––
+
+#RBG plotting
+
+#da sentinel<-c(b2,b3,b4,b8)
+#layer 1= blue 
+#2=b3=green
+#3=b4=red
+#4=b8=NIR (near infra red)
+
+im.plotRGB(sentinel, r=3, g=2, b=1)
+
+#piante sane e non sane riflettono la luce in modo diverso, il rosso ed il blu solitamente assorbiti vengono riflessi
+#inoltre cambia la qt. di NIR, piante sane riflettono molto, piante malate poco
+
+#essendoci solo 3 posti si toglie il blu spostando tutto i uno
+im.plotRGB(sentinel, r=4, g=3, b=2)
+
+#la parte bianca la centro sono rocce bianche che riflettono tutte le lunghezze d'onda, uguale a prescindere dalla composizione delle lunghezze d'onda
+
+#questa inversione conta poco, perchè le bande del visibile sono correlate tra loro
+im.plotRGB(sentinel, r=3, g=4, b=2)
+
+im.multiframe(1,2)
+im.plotRGB(sentinel, r=3, g=4, b=2)
+im.plotRGB(sentinel, r=4, g=3, b=2)
+
+im.plotRGB(sentinel, r=2, g=3, b=4)
+
+#grafico correlazioni 
+pairs(sentinel)
+
+#nel plottaggi abbiano utilizzato la funzione im.plotRGB che si basa su una funzione di "terra" (plotRGB)
+#plotting RGB via terra
+plotRGB(sentinel, r=4, g=3, b=2)
+#in questo caso non funziona in quanto la riflettanza non sarà mai in nesun punto totale (=1) o 0, quindi
+#strech lineare,es rif vera tra 20 e 60 -> 20=0, 60=1 (tot)
+plotRGB(sentinel, r=4, g=3, b=2, strech="lin")
+oppure istogram strech, stesso concetto ma con barre sotto "retta" per esprimere meglio valori intemedi, utile per discriminare oggetti molto "piccoli"
+#o poco individuabili
+
+plotRGB(sentinel, r=4, g=3, b=2, strech="hist")
+
+im.multiframe(1,2)
+plotRGB(sentinel, r=4, g=3, b=2, stretch="lin")
+plotRGB(sentinel, r=4, g=3, b=2, stretch="hist")
+#il secondo da le stesse informazioni enfatizzando le differenze 
 
 
 
