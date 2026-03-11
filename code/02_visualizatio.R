@@ -159,5 +159,10 @@ plotRGB(sentinel, r=4, g=3, b=2, stretch="lin")
 plotRGB(sentinel, r=4, g=3, b=2, stretch="hist")
 #il secondo da le stesse informazioni enfatizzando le differenze 
 
+#quando si utilizza il visibile si chiamano colori naturali, quando invece si utilizza l'infrarosso IR vengono detti false color
+#inoltre si può ulteriormente semplificare es. 
+plotRGB(3,1,2) #colori naturali
+
+
 
 
