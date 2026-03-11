@@ -2,6 +2,8 @@
 library(terra)
 library(imageRy)
 
+library(ggplot2)
+
 #pacchetti utilizzati
 #install.packages("viridis")
 
@@ -86,4 +88,29 @@ plot(sentinel$sentinel.dolomites.b8)   #boh a me non va
 #layer1=b2 layer2=b3 layer3=b4 layer4=b8
 plot(sentinel[[4]])
 plot(sentinel[[2]])
+
+#per multiframe <- mfrow... oppure im.multiframe oppure
+# creare uno stack ossia un'immagin sagtellitare, si mette tutto inseme, utulizzandole bande come vettore (funz. c)
+sentinel<-c(b2,b3,b4,b8)
+#layer 1= blue 
+#2=b3=verde
+#3=b4=red
+#4=b8=NIR (near infra red)
+
+sentinel
+
+#se serve solo una 
+plot(sentinel[[4]])
+
+
+library(ggplot2)
+
+#altro modo per avere più grafici
+#install.packages("patchwork")
+
+im.ggplot(b8)
+#a questo punto 4 modi per fare un multiframe 
+
+
+
 
