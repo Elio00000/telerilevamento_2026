@@ -4,9 +4,11 @@ library(imageRy)
 
 library(ggplot2)
 
+library(ggrdiges)
+
 #pacchetti utilizzati
 #install.packages("viridis")
-
+#install.packages("ggrdiges")
 #tutte le funzioni all'interno di imagery iniziano con "im."
 
 #listing data
@@ -162,6 +164,34 @@ plotRGB(sentinel, r=4, g=3, b=2, stretch="hist")
 #quando si utilizza il visibile si chiamano colori naturali, quando invece si utilizza l'infrarosso IR vengono detti false color
 #inoltre si può ulteriormente semplificare es. 
 plotRGB(3,1,2) #colori naturali
+
+
+#####
+im.list()
+####import data
+#nvdi biomassa di una certa area attraverso nearinfrared è assorbito
+
+nvdi <- im.import("Sentinel2_NDVI")
+
+hist(nvdi)
+#distribuzione di frequenza per curve continue
+
+# ?im.rdigeline-> immagine, scala , palette
+im.rdigeline(nvdi,scale=1, palette=viridis)
+names(nvdi)<-c("02feb","05may","08aug","11nov")
+#es
+im.rdigeline(nvdi,scale=2, palette=viridis)
+
+#scatter plot
+plot(nvdi[[1]],nvdi[[2]])
+#aggiungere linea
+abline(0,1,col="red")
+
+plot(nvdi[[1]],nvdi[[2]],xlim=c(-0.3,0.9),ylim=c(-0.3,0.9))
+abline(0,1,col="red")
+#i punti sopra alla linea sono più alti a maggi oche a febbraio
+#questo era unnesempio di dati multi-trmporali
+
 
 
 
