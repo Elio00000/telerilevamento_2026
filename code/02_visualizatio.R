@@ -4,11 +4,11 @@ library(imageRy)
 
 library(ggplot2)
 
-library(ggrdiges)
+library(ggridges)
 
 #pacchetti utilizzati
 #install.packages("viridis")
-#install.packages("ggrdiges")
+#install.packages("ggridges")
 #tutte le funzioni all'interno di imagery iniziano con "im."
 
 #listing data
