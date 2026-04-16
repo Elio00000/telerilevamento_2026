@@ -192,6 +192,35 @@ abline(0,1,col="red")
 #i punti sopra alla linea sono più alti a maggi oche a febbraio
 #questo era unnesempio di dati multi-trmporali
 
+#importare dati, parte mancante!!!!!!
+
+
+
+
+#google earth engine, si salva immagine, si set work directory, apertura con "terra", 
+#per scaricare immagini
+#codice in linguaggio javascript, tutto su duccio->external_data.md->Google Earth Engine Lectures-> codice 
+#in particolare sul codice c'è : var aoi #che sta per areao of interest, aoi va eliminata per crearne una nuova
+#creare un rettangolo con tool a forma di rettangolo,ma rimpiazzando geomentry con aoi, ossia dire all'amico google non è solo un poligono ma anche l'area di interesse
+#volendo modificare parametri es, bande colori
+#premmere RUN (in alto), nella parte tasks (a destra )e premerte RUN, alla fine è tutto in drive
+
+#earth observatory
+#immagini già elaborate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
