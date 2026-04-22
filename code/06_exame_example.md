@@ -35,7 +35,7 @@ richat<-flip(richat)
 plot(richat)
 ```
 
-## istogrammi con chat e clico for
+## istogrammi con chat e "ciclo" for
 
 ```r
 colori <- c("red", "green", "blue")
