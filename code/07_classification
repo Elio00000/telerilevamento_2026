@@ -1,0 +1,47 @@
+#R code for classifyng images
+
+library(terra)
+library(imageRy)
+
+im.list()
+
+#prendere
+#"Solar_Orbiter_s_first_views_of_the_Sun_pillars.jpg" 
+#rap. 3 diversi livelli energetici del sole da classificare per i tre livelli attraverso im.classify()
+
+sun<-im.import("Solar_Orbiter_s_first_views_of_the_Sun_pillars.jpg")
+
+?im.classify() #im.classify(  ùinput_image, num_clusters = 3, seed = NULL,..) num_clusters=numero classi , seed= prima iterazione, in default è NULL
+
+im.classify(sun,3)
+#colori strani perchè la classificazione parte da un certo punto del grafico e possono quindi essere leggermente diversi, procedura detta iterativa
+#si può scegliere la prima iterazione attraverso "seed"<- si classifica con un numero
+#
+im.classify(sun,num_clusters=3,seed=19)
+
+#gran canyon classification
+
+im.list()
+# e prendere :   "dolansprings_oli_2013088_canyon_lrg.jpg" 
+
+can<-im.import("dolansprings_oli_2013088_canyon_lrg.jpg")
+#il tipo di classificazione è detta non supervisionata, ossia R crea i gruppi, da iserire solo il numero di gruppi
+
+im.classify(can,num_clusters=4,seed=19)
+#ci può volere del tempo perchè i process di analis di dati dipendono dal numero di pixel che in questo caso sono molto numerosi
+#confusione tra acqua e zone scure ee zone chiare e nuvole, normale per le analisi non supervisionate, soluzioni: creare molte classe e unirle manualmente
+
+
+#prendere una qualsiasi immagine
+
+setwd("~/Desktop/immagini_telerilevamento")
+list.files()
+#funzione (rast) crea raster spaziale da imagine caricata
+
+piave<-rast("immagine_piave.jpeg") #rast funziona solo per immagini che hanno già una referenziazione 
+#in caso utilizzare ##ext(richat) <- c(0, 100, 0, 100) ##crs(richat) <- "EPSG:4326"
+
+piave<-flip(piave) #per girare il file
+
+im.classify(piave,num_clusters=3,seed=19)
+
