@@ -1,0 +1,18 @@
+#sviluppare funzioni
+
+###function #per sviluppare funzioni
+
+somma<-function(x,y){
+  z=x+y
+  return(z)
+}
+
+####> somma(2,7)
+#####[1] 9
+
+rapporto <- function(x,y) {
+  z=x/y
+  return(z)
+  }
+
+
